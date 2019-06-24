@@ -4,7 +4,7 @@
 
 1. Automação E2E
 2. Automação de serviço
-3. Levantamento de Cenários
+3. Levantamento de cenários
 
 ## Justificativa
 
