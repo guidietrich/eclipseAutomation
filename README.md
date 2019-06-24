@@ -10,7 +10,7 @@
 
 ### Automação E2E 
 
-Foi adotado o padrão **Page Object Model** implementado com a gem *SitePrism*. Para melhor organização do projeto, acrescentei a pasta `specs` que compõe as features utilizadas no projeto e a pasta `dataset`, contendo o arquivo `.yml` com a url especificada.
+Foi adotado o padrão **Page Object Model** implementado com a gem `site_prism`. Para melhor organização do projeto, acrescentei a pasta `specs` que compõe as features utilizadas no projeto e a pasta `dataset`, contendo o arquivo `.yml` com a url especificada.
 
 No arquivo `env.rb`, utilizei a gem `faker` para gerar massa aleatória e a gem `javascript` para executar comando javascript na inserção de cor e populá-los no método [`preencher_campos`](desafio_qa_engineer\automacao_e2e\features\pages\cadastrar_perfil_section.rb), responsável pelo preenchimentos dos campos na criação de perfil/endereço.  
 A gem `pry` foi utilizada para realizar o *debug* do código.
@@ -25,9 +25,9 @@ Neste projeto foi considerado a utilização da gem `httparty` para manipulaçã
 
 Além do cenário de sucesso para recuperar o *response* da requisição com um CEP válido, foram criados os cenários de CEP inválido e CEP inexistente:
 
-- CEP inexistente: Um CEP que atende a quantidade de caracteres de um CEP, porém não existe na base dos Correios. A requisição retorna HTTP 200, porém retorna campo `erro` no JSON.
+- CEP inexistente: Um CEP que atende a quantidade de caracteres de um CEP, porém não existe na base dos Correios. A requisição retorna `HTTP 200`, porém retorna campo `erro` no JSON.
 
-- CEP inválido: Um CEP que não atende a quantidade de caracteres de um CEP, pois este tem menos ou mais que 8 caracteres, tornando-o inválido e retornando uma Bad Request HTTP.
+- CEP inválido: Um CEP que não atende a quantidade de caracteres de um CEP, pois este tem menos ou mais que 8 caracteres, tornando-o inválido e retornando uma `Bad Request HTTP`.
 
 ### Levantamento de Cenários
 
